@@ -21,7 +21,7 @@ public class TransformLooper : MonoBehaviour {
 		instance.transform.SetParent(transform);
 		instance.transform.position = transform.position + Direction * Distance;
 		instance.transform.localScale = Vector3.one;
-		instance.transform.localRotation = Quaternion.Euler(Vector3.zero);
+		instance.transform.localRotation = Quaternion.identity;
 		
 		instance.TileCount--;
 	}
