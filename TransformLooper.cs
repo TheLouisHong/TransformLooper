@@ -18,10 +18,10 @@ public class TransformLooper : MonoBehaviour {
 
 	private void SpawnNextClone() {
 		TransformLooper instance = Instantiate(this) as TransformLooper;
-		instance.transform.SetParent(transform);
+//		instance.transform.SetParent(transform);
 		instance.transform.position = transform.position + Direction * Distance;
-		instance.transform.localScale = Vector3.one;
-		instance.transform.localRotation = Quaternion.identity;
+//		instance.transform.localScale = Vector3.one;
+//		instance.transform.localRotation = Quaternion.identity;
 		
 		instance.TileCount--;
 	}
@@ -30,6 +30,7 @@ public class TransformLooper : MonoBehaviour {
 		StartCoroutine(Loop());
 	}
 
+	// Update is called once per frame
 	private IEnumerator Loop () {
 		var wait = new WaitForFixedUpdate();
 		var startPos = transform.position;
@@ -45,4 +46,7 @@ public class TransformLooper : MonoBehaviour {
 		return Vector3.Lerp(start, start + direction * length, t);
 	}
 
+	public void Reset() {
+
+	}
 }
