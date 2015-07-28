@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
+// Make sure to rename the file name to TransformLooper.cs
 public class TransformLooper : MonoBehaviour {
 
 	public Vector3 Direction = new Vector3(1,0,0);
